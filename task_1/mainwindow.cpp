@@ -31,7 +31,7 @@ MainWindow::~MainWindow()
 void MainWindow::on_pbtn_pushButton_clicked()
 {
     int newValue = ui->pg_progressBar->value() + int((ui->pg_progressBar->maximum() - ui->pg_progressBar->minimum()) / 10);
-    if(newValue < 100){
+    if(newValue <= 100){
         ui->pg_progressBar->setValue(newValue);
     }
     else{
